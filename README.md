@@ -92,7 +92,7 @@ Pipeline execution consists of four Spark notebooks:
 
 After successful execution, the Gold layer becomes available for reporting through the Semantic Model.
 
-![ETL Pipeline](images/etl_pipeline.PNG)
+![ETL Pipeline](pipeline/etl-pipeline.PNG)
 
 ---
 
