@@ -94,8 +94,6 @@ After successful execution, the Gold layer becomes available for reporting throu
 
 # ETL Workflow
 
-# ETL Workflow
-
 | Layer | Purpose | Implementation |
 |-------|---------|----------------|
 | **Bronze** | Load raw operational data into the Lakehouse | Ingest source data without applying business transformations |
