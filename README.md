@@ -8,33 +8,20 @@ This project showcases practical experience in designing and implementing a mode
 
 ---
 
-# Project Outcomes
-
-The project demonstrates the ability to:
-
-- Design an end-to-end analytics architecture in Microsoft Fabric
-- Build a multi-layer Medallion Architecture
-- Develop ETL workflows using PySpark notebooks
-- Orchestrate data pipelines
-- Create a Star Schema semantic model
-- Deliver executive dashboards in Power BI
-
----
-
 # Project Overview
 
 The project implements a complete analytics workflow using Microsoft Fabric and Power BI.
 
 The solution is built on a synthetically generated logistics dataset designed to simulate realistic business operations while avoiding the use of confidential company data.
 
-The project includes:
+The project demonstrates the ability to:
 
-- Data ingestion into a Lakehouse
-- Data transformation using PySpark notebooks
-- Medallion Architecture (Bronze → Silver → Gold)
-- ETL orchestration with Microsoft Fabric Data Pipelines
-- Semantic Model development
-- Interactive Power BI dashboards
+Design an end-to-end analytics architecture in Microsoft Fabric
+Build a multi-layer Medallion Architecture (Bronze → Silver → Gold)
+Develop ETL workflows using PySpark notebooks
+Orchestrate data pipelines
+Create a Star Schema semantic model
+Deliver executive dashboards in Power BI
 
 The final result is a complete analytics platform that showcases modern Microsoft Fabric capabilities, from data engineering to executive reporting.
 
