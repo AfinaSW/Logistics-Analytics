@@ -6,12 +6,6 @@ This project showcases practical experience in designing and implementing a mode
 
 ---
 
-## Dashboard Preview
-
-![Executive Dashboard](images/dashboard_overview.PNG)
-
----
-
 # Skills Demonstrated
 
 This project demonstrates hands-on experience with:
