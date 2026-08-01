@@ -31,7 +31,7 @@ The solution was built as an end-to-end analytics platform using Microsoft Fabri
 ### Data Flow
 
 ```
-Source Files
+Data Sources
       │
       ▼
 Lakehouse
@@ -170,12 +170,4 @@ The executive dashboard provides a consolidated view of logistics performance th
 - Executive Power BI Dashboard
 - Business KPI Monitoring
 
----
 
-## 🔮 Future Improvements
-
-- SQL Server integration
-- Incremental data loading
-- Data quality monitoring
-- CI/CD deployment
-- Real-time streaming
