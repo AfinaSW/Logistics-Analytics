@@ -8,7 +8,7 @@ This project showcases practical experience in designing and implementing a mode
 
 ## Dashboard Preview
 
-![Executive Dashboard](images/dashboard-overview.png)
+![Executive Dashboard](images/dashboard-overview.PNG)
 
 ---
 
@@ -54,7 +54,7 @@ The complete analytics workflow was implemented within Microsoft Fabric.
 
 Data is loaded into a Lakehouse, transformed through Bronze, Silver, and Gold layers using Spark notebooks, orchestrated by Data Pipelines, and consumed by Power BI through a Semantic Model.
 
-![Solution Architecture](images/architecture.png)
+![Solution Architecture](images/architecture.PNG)
 
 ---
 
@@ -75,7 +75,7 @@ The analytical model follows a Star Schema with a centralized shipment fact tabl
 - Date
 - Cost
 
-![Data Model](images/data-model.png)
+![Data Model](images/data_model.PNG)
 
 ---
 
@@ -92,7 +92,7 @@ Pipeline execution consists of four Spark notebooks:
 
 After successful execution, the Gold layer becomes available for reporting through the Semantic Model.
 
-![ETL Pipeline](images/etl-pipeline.png)
+![ETL Pipeline](images/etl-pipeline.PNG)
 
 ---
 
@@ -164,7 +164,7 @@ Implemented features:
 - Route Profitability
 - Interactive Year Filter
 
-![Executive Overview](images/dashboard-overview.png)
+![Executive Overview](images/dashboard-overview.PNG)
 
 ---
 
@@ -180,7 +180,7 @@ Implemented features:
 - Operational KPIs
 - Carrier Summary Table
 
-![Operations Dashboard](images/dashboard-operations.png)
+![Operations Dashboard](images/dashboard-operations.PNG)
 
 ---
 
@@ -196,7 +196,7 @@ Implemented features:
 - Top Customers
 - Customer KPI Monitoring
 
-![Customer Analytics](images/dashboard-customers.png)
+![Customer Analytics](images/dashboard-customers.PNG)
 
 ---
 
