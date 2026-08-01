@@ -16,12 +16,12 @@ The solution is built on a synthetically generated logistics dataset designed to
 
 The project demonstrates the ability to:
 
-Design an end-to-end analytics architecture in Microsoft Fabric
-Build a multi-layer Medallion Architecture (Bronze → Silver → Gold)
-Develop ETL workflows using PySpark notebooks
-Orchestrate data pipelines
-Create a Star Schema semantic model
-Deliver executive dashboards in Power BI
+- Design an end-to-end analytics architecture in Microsoft Fabric
+- Build a multi-layer Medallion Architecture (Bronze → Silver → Gold)
+- Develop ETL workflows using PySpark notebooks
+- Orchestrate data pipelines
+- Create a Star Schema semantic model
+- Deliver executive dashboards in Power BI
 
 The final result is a complete analytics platform that showcases modern Microsoft Fabric capabilities, from data engineering to executive reporting.
 
