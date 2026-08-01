@@ -153,32 +153,19 @@ Implemented features:
 
 ---
 
-# Repository Structure
+# Technology Stack
 
-```text
-📦 logistics-analytics-platform
-│
-├── images/
-│   ├── architecture.PNG
-│   ├── data_model.PNG
-│   ├── dashboard_overview.PNG
-│   ├── dashboard_operations.PNG
-│   └── dashboard_customers.PNG
-│
-├── notebooks/
-│   ├── 01_Bronze_Ingestion.ipynb
-│   ├── 02_Silver_Transformation.ipynb
-│   ├── 03_Gold_Delivery_Analytics.ipynb
-│   └── 04_Gold_Dimensions.ipynb
-│
-├── powerbi/
-│   └── EuroTrans Analytics.pbix
-│
-├── pipeline/
-│ └── etl-pipeline.PNG
-│
-└── README.md
-```
+| Technology | Role in the Project |
+|------------|---------------------|
+| **Microsoft Fabric** | Unified analytics platform for data engineering and business intelligence |
+| **Lakehouse** | Centralized storage for raw and transformed data |
+| **PySpark** | Data ingestion, cleansing, and transformation |
+| **Delta Lake** | Storage format for Bronze, Silver, and Gold tables |
+| **SQL** | Data exploration, validation, and quality checks |
+| **Data Pipelines** | ETL workflow orchestration |
+| **Semantic Model** | Analytical layer for Power BI reporting |
+| **Star Schema** | Dimensional data model optimized for analytics |
+| **Power BI** | Interactive dashboards and executive reporting |
 
 
 
