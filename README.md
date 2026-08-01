@@ -8,20 +8,16 @@ This project showcases practical experience in designing and implementing a mode
 
 ---
 
-# Skills Demonstrated
+# Project Outcomes
 
-This project demonstrates hands-on experience with:
+The project demonstrates the ability to:
 
-- Microsoft Fabric Lakehouse
-- Medallion Architecture (Bronze → Silver → Gold)
-- PySpark ETL Development
-- Delta Lake
-- SQL Data Validation
-- Microsoft Fabric Data Pipelines
-- Semantic Modeling
-- Star Schema Design
-- Power BI Dashboard Development
-- KPI Design & Business Analytics
+- Design an end-to-end analytics architecture in Microsoft Fabric
+- Build a multi-layer Medallion Architecture
+- Develop ETL workflows using PySpark notebooks
+- Orchestrate data pipelines
+- Create a Star Schema semantic model
+- Deliver executive dashboards in Power BI
 
 ---
 
@@ -75,6 +71,15 @@ The analytical model follows a Star Schema with a centralized shipment fact tabl
 
 ---
 
+# ETL Workflow
+
+| Layer | Purpose | Implementation |
+|-------|---------|----------------|
+| **Bronze** | Load raw operational data into the Lakehouse | Ingest source data without applying business transformations |
+| **Silver** | Clean and standardize the data | Remove duplicates, trim strings, validate schema, and improve data quality using PySpark |
+| **Gold** | Create business-ready analytical tables | Calculate business metrics and prepare optimized fact and dimension tables for reporting |
+
+---
 # ETL Pipeline
 
 The ETL process is fully orchestrated using Microsoft Fabric Data Pipelines.
@@ -89,16 +94,6 @@ Pipeline execution consists of four Spark notebooks:
 After successful execution, the Gold layer becomes available for reporting through the Semantic Model.
 
 ![ETL Pipeline](pipeline/etl-pipeline.PNG)
-
----
-
-# ETL Workflow
-
-| Layer | Purpose | Implementation |
-|-------|---------|----------------|
-| **Bronze** | Load raw operational data into the Lakehouse | Ingest source data without applying business transformations |
-| **Silver** | Clean and standardize the data | Remove duplicates, trim strings, validate schema, and improve data quality using PySpark |
-| **Gold** | Create business-ready analytical tables | Calculate business metrics and prepare optimized fact and dimension tables for reporting |
 
 ---
 
@@ -169,21 +164,6 @@ Implemented features:
 
 ---
 
-# Technology Stack
-
-| Technology | Purpose |
-|------------|----------------|
-| Microsoft Fabric | Unified Analytics Platform |
-| Lakehouse | Data Storage |
-| Delta Lake | Data Format |
-| PySpark | ETL Development |
-| SQL | Data Validation |
-| Data Pipeline | Workflow Orchestration |
-| Semantic Model | Analytical Layer |
-| Power BI | Dashboard Development |
-
----
-
 # Repository Structure
 
 ```text
@@ -211,18 +191,7 @@ Implemented features:
 └── README.md
 ```
 
----
 
-# Technical Implementation
-
-- Designed a Medallion Architecture in Microsoft Fabric
-- Built an end-to-end ETL process using PySpark notebooks
-- Automated data workflows with Microsoft Fabric Data Pipelines
-- Developed a Star Schema Semantic Model
-- Created interactive Power BI dashboards
-- Implemented executive KPI reporting
-- Applied SQL for data validation
-- Delivered a complete analytics solution within Microsoft Fabric
 
 
 
