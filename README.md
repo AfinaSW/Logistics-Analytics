@@ -1,6 +1,8 @@
 # 🚛 Logistics Analytics Platform
 
-An end-to-end analytics solution built with **Microsoft Fabric** and **Power BI**.
+An end-to-end analytics solution built with Microsoft Fabric and Power BI.
+
+**Microsoft Fabric • Lakehouse • PySpark • SQL • Data Pipelines • Semantic Model • Power BI**
 
 This project showcases practical experience in designing and implementing a modern analytics platform using Microsoft Fabric. It demonstrates the complete analytics lifecycle—from data ingestion and transformation to semantic modeling and executive reporting.
 
@@ -25,7 +27,7 @@ This project demonstrates hands-on experience with:
 
 # Project Overview
 
-This project demonstrates the implementation of an end-to-end analytics solution using Microsoft Fabric and Power BI.
+The project implements a complete analytics workflow using Microsoft Fabric and Power BI.
 
 The solution is built on a synthetically generated logistics dataset designed to simulate realistic business operations while avoiding the use of confidential company data.
 
@@ -92,38 +94,13 @@ After successful execution, the Gold layer becomes available for reporting throu
 
 # ETL Workflow
 
-## Bronze Layer
+# ETL Workflow
 
-- Load raw operational data into the Lakehouse
-- Preserve source data without business transformations
-
----
-
-## Silver Layer
-
-Data cleansing and standardization using PySpark.
-
-Implemented transformations include:
-
-- Duplicate removal
-- String trimming
-- Schema standardization
-- Data quality improvements
-
----
-
-## Gold Layer
-
-Creation of business-ready analytical tables optimized for reporting.
-
-Implemented business calculations include:
-
-- Revenue
-- Transportation Cost
-- Profit
-- Profit Margin
-- Delivery Performance
-- Operational KPIs
+| Layer | Purpose | Implementation |
+|-------|---------|----------------|
+| **Bronze** | Load raw operational data into the Lakehouse | Ingest source data without applying business transformations |
+| **Silver** | Clean and standardize the data | Remove duplicates, trim strings, validate schema, and improve data quality using PySpark |
+| **Gold** | Create business-ready analytical tables | Calculate business metrics and prepare optimized fact and dimension tables for reporting |
 
 ---
 
@@ -134,15 +111,15 @@ A Semantic Model was created in Microsoft Fabric to provide a centralized analyt
 The model implements:
 
 - Star Schema relationships
-- Business measures
-- KPI calculations
-- Optimized reporting model
+- Business-friendly semantic layer
+- Optimized reporting structure
+- Power BI integration
 
 ---
 
 # Power BI Report
 
-The report consists of three interactive dashboard pages.
+The Power BI report consists of three interactive pages designed for executive reporting, operational monitoring, and customer analytics.
 
 ---
 
@@ -196,7 +173,7 @@ Implemented features:
 
 # Technology Stack
 
-| Technology | Implementation |
+| Technology | Purpose |
 |------------|----------------|
 | Microsoft Fabric | Unified Analytics Platform |
 | Lakehouse | Data Storage |
@@ -215,12 +192,11 @@ Implemented features:
 📦 logistics-analytics-platform
 │
 ├── images/
-│   ├── architecture.png
-│   ├── data_model.png
-│   ├── etl-pipeline.png
-│   ├── dashboard_overview.png
-│   ├── dashboard_operations.png
-│   └── dashboard_customers.png
+│   ├── architecture.PNG
+│   ├── data_model.PNG
+│   ├── dashboard_overview.PNG
+│   ├── dashboard_operations.PNG
+│   └── dashboard_customers.PNG
 │
 ├── notebooks/
 │   ├── 01_Bronze_Ingestion.ipynb
@@ -232,13 +208,14 @@ Implemented features:
 │   └── EuroTrans Analytics.pbix
 │
 ├── pipeline/
+│ └── etl-pipeline.PNG
 │
 └── README.md
 ```
 
 ---
 
-# Key Technical Highlights
+# Technical Implementation
 
 - Designed a Medallion Architecture in Microsoft Fabric
 - Built an end-to-end ETL process using PySpark notebooks
