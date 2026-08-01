@@ -56,7 +56,7 @@ A central fact table stores shipment transactions and is connected to multiple d
 
 The model serves as the foundation of the Semantic Model and supports efficient filtering, aggregation, and KPI calculations in Power BI.
 
-
+![Data Model](images/data_model.PNG)
 ---
 
 # ETL Workflow
@@ -96,7 +96,6 @@ The model implements:
 - Optimized reporting structure
 - Power BI integration
 
-![Data Model](images/data_model.PNG)
 ---
 
 # Power BI Report
