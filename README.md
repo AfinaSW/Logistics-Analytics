@@ -1,10 +1,8 @@
 # 🚛 Logistics Analytics Platform
 
-An end-to-end analytics solution built with Microsoft Fabric and Power BI.
+This project showcases practical experience in designing and implementing a modern analytics platform using Microsoft Fabric. It demonstrates the complete analytics lifecycle—from data ingestion and transformation to semantic modeling and executive reporting.
 
 **Microsoft Fabric • Lakehouse • PySpark • SQL • Data Pipelines • Semantic Model • Power BI**
-
-This project showcases practical experience in designing and implementing a modern analytics platform using Microsoft Fabric. It demonstrates the complete analytics lifecycle—from data ingestion and transformation to semantic modeling and executive reporting.
 
 ---
 
@@ -39,20 +37,26 @@ Data is loaded into a Lakehouse, transformed through Bronze, Silver, and Gold la
 
 # Data Model
 
-The analytical model follows a Star Schema with a centralized shipment fact table connected to multiple business dimensions.
+The analytical model follows a **Star Schema** designed to optimize query performance and simplify analytical reporting.
 
-### Fact Table
+A central fact table stores shipment transactions and is connected to multiple dimension tables that provide business context for customer, product, carrier, route, date, and cost analysis.
 
-- Shipments
+**Fact Table**
 
-### Dimension Tables
+- `gold_fact_shipments`
 
-- Customer
-- Product
-- Carrier
-- Route
-- Date
-- Cost
+**Dimension Tables**
+
+- `gold_dim_customer`
+- `gold_dim_product`
+- `gold_dim_carrier`
+- `gold_dim_route`
+- `gold_dim_date`
+- `gold_dim_cost`
+
+The model serves as the foundation of the Semantic Model and supports efficient filtering, aggregation, and KPI calculations in Power BI.
+
+![Data Model](images/data-model.png)
 
 ![Data Model](images/data_model.PNG)
 
@@ -60,7 +64,7 @@ The analytical model follows a Star Schema with a centralized shipment fact tabl
 
 # ETL Workflow
 
-| Layer | Purpose | Implementation |
+| Layer | Purpose | Key Transformations |
 |-------|---------|----------------|
 | **Bronze** | Load raw operational data into the Lakehouse | Ingest source data without applying business transformations |
 | **Silver** | Clean and standardize the data | Remove duplicates, trim strings, validate schema, and improve data quality using PySpark |
