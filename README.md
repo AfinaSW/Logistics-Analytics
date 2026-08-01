@@ -1,173 +1,261 @@
 # 🚛 Logistics Analytics Platform
 
-An end-to-end logistics analytics solution built with **Microsoft Fabric** and **Power BI**.
+An end-to-end analytics solution built with **Microsoft Fabric** and **Power BI**.
 
-The project demonstrates how Microsoft Fabric can be used to build a unified analytics platform by integrating data engineering, ETL, semantic modeling, and business intelligence within a single environment.
-
-The solution follows the **Medallion Architecture (Bronze → Silver → Gold)** and delivers executive-level insights through an interactive Power BI dashboard.
+This project showcases practical experience in designing and implementing a modern analytics platform using Microsoft Fabric. It demonstrates the complete analytics lifecycle—from data ingestion and transformation to semantic modeling and executive reporting.
 
 ---
 
-## 📌 Business Problem
+## Dashboard Preview
 
-Logistics companies generate large volumes of operational data from transportation, warehousing, and customer management systems. Without a structured analytics platform, decision-makers struggle to monitor operational performance, control transportation costs, and identify profitability drivers.
-
-This project demonstrates how raw operational data can be transformed into reliable business insights using Microsoft Fabric.
-
-The dashboard enables business users to answer questions such as:
-
-- How is revenue changing over time?
-- What are the main transportation cost drivers?
-- Which customers generate the highest profit?
-- Which delivery routes perform best?
-- How do delays affect operational performance?
+![Executive Dashboard](images/dashboard-overview.png)
 
 ---
 
-## 🏗 Solution Architecture
+# Skills Demonstrated
 
-The solution was built as an end-to-end analytics platform using Microsoft Fabric.
+This project demonstrates hands-on experience with:
 
-### Data Flow
-
-```
-Data Sources
-      │
-      ▼
-Lakehouse
-      │
-      ▼
-Bronze Layer
-      │
-      ▼
-Silver Layer
-      │
-      ▼
-Gold Layer
-      │
-      ▼
-Semantic Model
-      │
-      ▼
-Power BI Dashboard
-```
-
-The complete ETL process is orchestrated through Microsoft Fabric Data Pipelines.
+- Microsoft Fabric Lakehouse
+- Medallion Architecture (Bronze → Silver → Gold)
+- PySpark ETL Development
+- Delta Lake
+- SQL Data Validation
+- Microsoft Fabric Data Pipelines
+- Semantic Modeling
+- Star Schema Design
+- Power BI Dashboard Development
+- KPI Design & Business Analytics
 
 ---
 
-## ⚙️ Technology Stack
+# Project Overview
 
-| Technology | Purpose |
-|------------|---------|
-| Microsoft Fabric | Unified Analytics Platform |
-| Lakehouse | Centralized Data Storage |
-| Delta Lake | Data Format |
-| PySpark | Data Transformation |
-| SQL | Data Validation & Analysis |
-| Data Pipeline | ETL Orchestration |
-| Semantic Model | Business Layer |
-| Power BI | Executive Dashboard |
+This project demonstrates the implementation of an end-to-end analytics solution using Microsoft Fabric and Power BI.
 
----
+The solution is built on a synthetically generated logistics dataset designed to simulate realistic business operations while avoiding the use of confidential company data.
 
-## 🥉 Bronze Layer
+The project includes:
 
-The Bronze layer stores raw business data loaded into the Lakehouse.
+- Data ingestion into a Lakehouse
+- Data transformation using PySpark notebooks
+- Medallion Architecture (Bronze → Silver → Gold)
+- ETL orchestration with Microsoft Fabric Data Pipelines
+- Semantic Model development
+- Interactive Power BI dashboards
 
-No business transformations are applied at this stage.
+The final result is a complete analytics platform that showcases modern Microsoft Fabric capabilities, from data engineering to executive reporting.
 
 ---
 
-## 🥈 Silver Layer
+# Solution Architecture
 
-The Silver layer performs data cleansing and standardization.
+The complete analytics workflow was implemented within Microsoft Fabric.
 
-Main transformations include:
+Data is loaded into a Lakehouse, transformed through Bronze, Silver, and Gold layers using Spark notebooks, orchestrated by Data Pipelines, and consumed by Power BI through a Semantic Model.
 
-- duplicate removal
-- string standardization
-- schema validation
-- preparation for analytical processing
+![Solution Architecture](images/architecture.png)
 
 ---
 
-## 🥇 Gold Layer
+# Data Model
 
-The Gold layer contains business-ready analytical tables optimized for reporting.
+The analytical model follows a Star Schema with a centralized shipment fact table connected to multiple business dimensions.
 
-Business calculations include:
+### Fact Table
+
+- Shipments
+
+### Dimension Tables
+
+- Customer
+- Product
+- Carrier
+- Route
+- Date
+- Cost
+
+![Data Model](images/data-model.png)
+
+---
+
+# ETL Pipeline
+
+The ETL process is fully orchestrated using Microsoft Fabric Data Pipelines.
+
+Pipeline execution consists of four Spark notebooks:
+
+1. Load Bronze Layer
+2. Transform Silver Layer
+3. Build Gold Fact
+4. Build Gold Dimensions
+
+After successful execution, the Gold layer becomes available for reporting through the Semantic Model.
+
+![ETL Pipeline](images/etl-pipeline.png)
+
+---
+
+# ETL Workflow
+
+## Bronze Layer
+
+- Load raw operational data into the Lakehouse
+- Preserve source data without business transformations
+
+---
+
+## Silver Layer
+
+Data cleansing and standardization using PySpark.
+
+Implemented transformations include:
+
+- Duplicate removal
+- String trimming
+- Schema standardization
+- Data quality improvements
+
+---
+
+## Gold Layer
+
+Creation of business-ready analytical tables optimized for reporting.
+
+Implemented business calculations include:
 
 - Revenue
 - Transportation Cost
 - Profit
 - Profit Margin
-- Cost Breakdown
-
-These tables are consumed directly by the Semantic Model.
+- Delivery Performance
+- Operational KPIs
 
 ---
 
-## 📊 Power BI Dashboard
+# Semantic Model
 
-The executive dashboard provides a consolidated view of logistics performance through three analytical pages:
+A Semantic Model was created in Microsoft Fabric to provide a centralized analytical layer for Power BI.
 
-### Executive Overview
+The model implements:
 
-- Revenue
-- Profit
-- Profit Margin
+- Star Schema relationships
+- Business measures
+- KPI calculations
+- Optimized reporting model
+
+---
+
+# Power BI Report
+
+The report consists of three interactive dashboard pages.
+
+---
+
+## Executive Overview
+
+Designed for executive-level monitoring of business performance.
+
+Implemented features:
+
+- KPI Cards
+- Revenue Trend Analysis
 - Cost Breakdown
-- Revenue Trend
+- Route Profitability
+- Interactive Year Filter
 
-### Operational Performance
+![Executive Overview](images/dashboard-overview.png)
 
-- Route Performance
-- Delivery Status
+---
+
+## Operations Dashboard
+
+Focused on logistics performance monitoring.
+
+Implemented features:
+
 - Delay Analysis
-- Cost Analysis
+- Carrier Performance
+- Route Performance
+- Operational KPIs
+- Carrier Summary Table
 
-### Customer Analytics
-
-- Customer Profitability
-- Customer Revenue Ranking
-- Customer Performance Metrics
+![Operations Dashboard](images/dashboard-operations.png)
 
 ---
 
-## 📂 Repository Structure
+## Customer Analytics
 
-```
-📦 Logistics Analytics Platform
-│
-├── notebooks/
-│   ├── 01_Bronze_Ingestion
-│   ├── 02_Silver_Transformation
-│   ├── 03_Gold_Delivery_Analytics
-│   └── 04_Gold_Dimensions
-│
-├── pipeline/
-│
-├── semantic_model/
-│
-├── powerbi/
+Provides customer segmentation and profitability analysis.
+
+Implemented features:
+
+- Revenue by Industry
+- Customer Tier Analysis
+- Country Performance
+- Top Customers
+- Customer KPI Monitoring
+
+![Customer Analytics](images/dashboard-customers.png)
+
+---
+
+# Technology Stack
+
+| Technology | Implementation |
+|------------|----------------|
+| Microsoft Fabric | Unified Analytics Platform |
+| Lakehouse | Data Storage |
+| Delta Lake | Data Format |
+| PySpark | ETL Development |
+| SQL | Data Validation |
+| Data Pipeline | Workflow Orchestration |
+| Semantic Model | Analytical Layer |
+| Power BI | Dashboard Development |
+
+---
+
+# Repository Structure
+
+```text
+📦 logistics-analytics-platform
 │
 ├── images/
+│   ├── architecture.png
+│   ├── data-model.png
+│   ├── etl-pipeline.png
+│   ├── dashboard-overview.png
+│   ├── dashboard-operations.png
+│   └── dashboard-customers.png
+│
+├── notebooks/
+│   ├── 01_Bronze_Ingestion.ipynb
+│   ├── 02_Silver_Transformation.ipynb
+│   ├── 03_Gold_Delivery_Analytics.ipynb
+│   └── 04_Gold_Dimensions.ipynb
+│
+├── powerbi/
+│   └── EuroTrans Analytics.pbix
+│
+├── pipeline/
 │
 └── README.md
 ```
 
 ---
 
-## 🚀 Key Features
+# Key Technical Highlights
 
-- End-to-end Microsoft Fabric solution
-- Medallion Architecture
-- Automated ETL Pipeline
-- PySpark Data Transformation
-- Delta Lake Storage
-- Semantic Modeling
-- Executive Power BI Dashboard
-- Business KPI Monitoring
+- Designed a Medallion Architecture in Microsoft Fabric
+- Built an end-to-end ETL process using PySpark notebooks
+- Automated data workflows with Microsoft Fabric Data Pipelines
+- Developed a Star Schema Semantic Model
+- Created interactive Power BI dashboards
+- Implemented executive KPI reporting
+- Applied SQL for data validation
+- Delivered a complete analytics solution within Microsoft Fabric
+
+
+
 
 
