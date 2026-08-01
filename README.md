@@ -216,11 +216,11 @@ Implemented features:
 │
 ├── images/
 │   ├── architecture.png
-│   ├── data-model.png
+│   ├── data_model.png
 │   ├── etl-pipeline.png
-│   ├── dashboard-overview.png
-│   ├── dashboard-operations.png
-│   └── dashboard-customers.png
+│   ├── dashboard_overview.png
+│   ├── dashboard_operations.png
+│   └── dashboard_customers.png
 │
 ├── notebooks/
 │   ├── 01_Bronze_Ingestion.ipynb
