@@ -8,7 +8,7 @@ This project showcases practical experience in designing and implementing a mode
 
 ## Dashboard Preview
 
-![Executive Dashboard](images/dashboard-overview.PNG)
+![Executive Dashboard](images/dashboard_overview.PNG)
 
 ---
 
@@ -164,7 +164,7 @@ Implemented features:
 - Route Profitability
 - Interactive Year Filter
 
-![Executive Overview](images/dashboard-overview.PNG)
+![Executive Overview](images/dashboard_overview.PNG)
 
 ---
 
@@ -180,7 +180,7 @@ Implemented features:
 - Operational KPIs
 - Carrier Summary Table
 
-![Operations Dashboard](images/dashboard-operations.PNG)
+![Operations Dashboard](images/dashboard_operations.PNG)
 
 ---
 
@@ -196,7 +196,7 @@ Implemented features:
 - Top Customers
 - Customer KPI Monitoring
 
-![Customer Analytics](images/dashboard-customers.PNG)
+![Customer Analytics](images/dashboard_customers.PNG)
 
 ---
 
