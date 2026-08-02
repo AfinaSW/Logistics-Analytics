@@ -38,7 +38,7 @@ Data is loaded into a Lakehouse, transformed through Bronze, Silver, and Gold la
 
 # Data Model
 
-The analytical model follows a **Star Schema** designed to optimize query performance and simplify analytical reporting.
+The analytical model follows a Star Schema designed to optimize query performance and simplify analytical reporting.
 
 A central fact table stores shipment transactions and is connected to multiple dimension tables that provide business context for customer, product, carrier, route, date, and cost analysis.
 
@@ -71,7 +71,7 @@ The model serves as the foundation of the Semantic Model and supports efficient 
 ---
 ## ETL Monitoring & Execution Audit
 
-To improve ETL traceability, the solution includes an **ETL Audit Log** that captures execution metadata for every processed table across the Medallion Architecture.
+To improve ETL traceability, the solution includes an ETL Audit Log that captures execution metadata for every processed table across the Medallion Architecture.
 
 The audit log records:
 
@@ -93,9 +93,9 @@ This lightweight audit framework improves ETL observability by providing executi
 
 # ETL Pipeline
 
-The ETL process is fully orchestrated using **Microsoft Fabric Data Pipelines**.
+The ETL process is fully orchestrated using Microsoft Fabric Data Pipelines.
 
-The pipeline executes automatically every day at **5:30 AM**, providing a fully automated end-to-end data refresh.
+The pipeline executes automatically every day at 5:30 AM, providing a fully automated end-to-end data refresh.
 
 Pipeline execution consists of four Spark notebooks:
 
@@ -104,7 +104,7 @@ Pipeline execution consists of four Spark notebooks:
 3. Build Gold Fact
 4. Build Gold Dimensions
 
-Upon successful execution, the pipeline populates the Gold layer, records execution metadata in the **ETL Audit Log**, and makes the data available for reporting through the Semantic Model.
+Upon successful execution, the pipeline populates the Gold layer, records execution metadata in the ETL Audit Log, and makes the data available for reporting through the Semantic Model.
 
 ![ETL Pipeline](pipeline/etl-pipeline.PNG)
 
