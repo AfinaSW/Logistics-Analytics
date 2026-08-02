@@ -17,6 +17,7 @@ The project demonstrates the ability to:
 - Design an end-to-end analytics architecture in Microsoft Fabric
 - Build a multi-layer Medallion Architecture (Bronze → Silver → Gold)
 - Develop ETL workflows using PySpark notebooks
+- ETL monitoring with execution audit logging
 - Orchestrate data pipelines
 - Create a Star Schema semantic model
 - Deliver executive dashboards in Power BI
@@ -68,18 +69,42 @@ The model serves as the foundation of the Semantic Model and supports efficient 
 | **Gold** | Create business-ready analytical tables | Calculate business metrics and prepare optimized fact and dimension tables for reporting |
 
 ---
+## ETL Monitoring & Execution Audit
+
+To improve ETL traceability, the solution includes an **ETL Audit Log** that captures execution metadata for every processed table across the Medallion Architecture.
+
+The audit log records:
+
+- Notebook name
+- Processing layer (Bronze, Silver, Gold)
+- Target table
+- Row counts before and after processing
+- Duplicate records removed
+- Execution status
+- Execution timestamp
+
+![ETL Audit Log](Images/etl_audit_log.png)
+
+Each pipeline execution appends a new audit record, providing historical execution traceability across all ETL stages.
+
+This lightweight audit framework improves ETL observability by providing execution traceability and supporting monitoring and troubleshooting of data processing workflows.
+
+---
+
 # ETL Pipeline
 
-The ETL process is fully orchestrated using Microsoft Fabric Data Pipelines.
+The ETL process is fully orchestrated using **Microsoft Fabric Data Pipelines**.
+
+The pipeline executes automatically every day at **5:30 AM**, providing a fully automated end-to-end data refresh.
 
 Pipeline execution consists of four Spark notebooks:
 
-1. Load Bronze Layer
+1. Ingest Bronze Layer
 2. Transform Silver Layer
 3. Build Gold Fact
 4. Build Gold Dimensions
 
-After successful execution, the Gold layer becomes available for reporting through the Semantic Model.
+Upon successful execution, the pipeline populates the Gold layer, records execution metadata in the **ETL Audit Log**, and makes the data available for reporting through the Semantic Model.
 
 ![ETL Pipeline](pipeline/etl-pipeline.PNG)
 
@@ -165,6 +190,21 @@ Implemented features:
 | **Semantic Model** | Analytical layer for Power BI reporting |
 | **Star Schema** | Dimensional data model optimized for analytics |
 | **Power BI** | Interactive dashboards and executive reporting |
+
+# Future Improvements
+
+The project currently includes ETL execution auditing through the `etl_audit_log` table, capturing execution metadata such as processed row counts, duplicate removal statistics, execution status, and timestamps.
+
+Potential production enhancements include:
+
+- Pipeline Run ID propagation across all notebooks for end-to-end execution traceability
+- Data reconciliation between Bronze, Silver, and Gold layers
+- Automated data quality validation (null checks, schema validation, and business rules)
+- Exception logging for failed transformations and rejected records
+- ETL performance monitoring (execution duration and processing metrics)
+- Automated notifications for ETL failures
+
+This project was intentionally designed to demonstrate an end-to-end analytics solution while leaving room for additional enterprise-grade monitoring, data quality, and governance capabilities.
 
 
 
