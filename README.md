@@ -83,7 +83,7 @@ The audit log records:
 - Execution status
 - Execution timestamp
 
-![ETL Audit Log](Images/etl_audit_log.PNG)
+![ETL Audit Log](images/etl_audit_log.PNG)
 
 Each pipeline execution appends a new audit record, providing historical execution traceability across all ETL stages.
 
