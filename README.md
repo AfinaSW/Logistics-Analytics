@@ -191,12 +191,13 @@ Implemented features:
 | **Star Schema** | Dimensional data model optimized for analytics |
 | **Power BI** | Interactive dashboards and executive reporting |
 
-# Future Improvements
+## Future Improvements
 
 The project currently includes ETL execution auditing through the `etl_audit_log` table, capturing execution metadata such as processed row counts, duplicate removal statistics, execution status, and timestamps.
 
-Potential production enhancements include:
+Potential production improvements include:
 
+- Automated Semantic Model refresh after successful pipeline execution
 - Pipeline Run ID propagation across all notebooks for end-to-end execution traceability
 - Data reconciliation between Bronze, Silver, and Gold layers
 - Automated data quality validation (null checks, schema validation, and business rules)
